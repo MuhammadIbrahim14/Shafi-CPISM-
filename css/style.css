@@ -2,7 +2,7 @@
 
 /* BG IMAGE CSS  */
 .bg-image {
-	background: url(../assets/BG\ image/bg_image.jpg);
+	background: url(../assets/BG\ image/BG_image1.jpg);
 	width: 100%;
 	height: 100vh;
 	background-position: center;
@@ -18,6 +18,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	overflow-x: hidden;
+	background-color: #000000;
 }
 
 
@@ -33,7 +34,7 @@ body {
 }
 
 .container {
-	position: fixed;
+	/* position: fixed; */
 	width: 100%;
 	height: 10vh;
 	/* margin-top: 20px; */
@@ -472,4 +473,96 @@ a {
 		visibility: visible;
 		opacity: 1;
 	}
+}
+
+/* HOMEPAGE TIMELINE CSS  */
+
+.time-line{
+	width: 1000px;
+	margin: 100px auto;
+	position: relative;
+}
+
+.time-line::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	height: 100%;
+	width: 5px;
+	background: linear-gradient(red , black);
+	animation: lineAnimate 5s linear forwards;
+}
+
+@keyframes lineAnimate{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+
+.container-time-line{
+	width: 50%;
+	position: relative;
+	padding: 10px 20px ;
+	animation: animateContainer 1s linear forwards;
+	opacity: 0;
+	animation-delay: var(--dly);
+}
+
+@keyframes animateContainer{
+	0%{
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.container-time-line:nth-child(even){
+	right: -50%;
+}
+
+.container-time-line:nth-child(odd)::before{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: linear-gradient(red , black);
+	top: 0;
+	right: -8px;
+	border-radius: 50%;
+	z-index: 100;
+}
+.container-time-line:nth-child(even)::before{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: linear-gradient(red , black);
+	top: 0;
+	left: -12.5px;
+	border-radius: 50%;
+}
+
+.text-content{
+	padding: 20px 30px;
+	/* background-color: gray; */
+	box-shadow: 0 5px 10px #191919;
+	border-radius: 10px;
+}
+
+.text-content h2{
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+}
+
+.text-content p{
+	font-size: 13px;
+	color: white;
+	margin-top: 10px;
 }
