@@ -14,7 +14,7 @@
 .bg-video{
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -114,12 +114,14 @@ body {
 	box-sizing: border-box;
 }
 
+
+
 .container {
 	/* position: absolute; */
 	width: 100%;
 	height: 10vh;
 	/* margin-top: 20px; */
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.6); */
 	/* background-color: red; */
 	align-content: center;
 }
@@ -128,6 +130,8 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+	/* background-color: rgba(0, 0, 0, 0.6); */
+
 }
 
 .v-center {
@@ -147,10 +151,11 @@ a {
 /* header */
 .header {
 	display: block;
-	width: 100%;
+	/* width: 100%; */
 	position: relative;
 	z-index: 99;
 	/* padding:15px; */
+	background-color: rgba(0, 0, 0, 0.6);
 }
 .header-item{
 	display: flex;
@@ -773,3 +778,134 @@ a {
 }
 
 /* ABOUT US CSS END  */
+
+/* PRODUCT PAGE CSS START  */
+html{
+	/*   *****   Storing Colors In Variables   *****  */
+	--body-clr: #000000;
+	--primary-clr: #9b0000;
+	--primary-light-clr: #eaf3fa;
+  }
+
+  .mainContainer{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+  }
+	.portfolio{
+  width: 100%;
+  padding: 30px;
+  background-color: var(--body-clr);
+}
+.portfolio .section-head{
+  max-width: 700px;
+  margin: 0px auto 25px;
+  text-align: center;
+}
+.section-head h1{
+  position: relative;
+  font-size: 32px;
+  margin: 10px 0px 30px;
+  color: var(--primary-clr);
+}
+.button-group{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.button-group .button{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #c8d1d8;
+  color: var(--primary-clr);
+  font-style: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.button-group .button.active{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+.button-group .button:hover{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+div.gallery{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.gallery .item{
+	/* border: 10px solid rgb(155, 155, 155); */
+  /* position: relative; */
+  margin: 4px;
+  width: calc(33.333% - 8px);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 15px;
+  /* border-radius: 50px;
+  background-color: #ffffff; */
+}
+.item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: 0.3s;
+  /* border: 5px solid #9b0000; */
+}
+
+.item .overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	padding: 15px;
+	overflow: hidden;
+	transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+  }
+  .item:hover .overlay{
+	opacity: 1;
+  }
+  .item .overlay a{
+	display: inline-block;
+	padding: 8px 16px;
+	/* border: 2px solid var(--body-clr); */
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+	transition: 0.3s;
+  }
+  .item .overlay a:hover{
+	background-color: var(--body-clr);
+	color: var(--primary-clr);
+  }
+
+
+@media(max-width: 1024px){
+  div.gallery .item{
+    width: calc(50% - 8px);
+  }
+}
+
+@media(max-width: 600px){
+  div.gallery .item{
+    width: 100%;
+    margin: 4px 0px;
+  }
+}
+
+/* PRODUCT PAGE CSS END  */
