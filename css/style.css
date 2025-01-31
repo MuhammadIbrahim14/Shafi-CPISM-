@@ -973,6 +973,14 @@ div.gallery .item {
 	padding: 10px;
 }
 
+.item .img-content .btn-pr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	gap: 12px;
+}
+
 .item .img-content h1{
 	font-size: 15px;
 	color: #000000;
@@ -996,12 +1004,23 @@ div.gallery .item {
 }
 
 .item .img-content .buyNow{
-	font-size: 20px;
+	font-size: 16px;
 	color: #000000;
 	border: none;
-	padding: 8px;
-	border-radius: 15px;
+	padding: 9px;
+	border-radius: 12px;
 	background-color: rgb(0, 234, 255);
+	width: 100%;
+	margin-top: 15px;
+}
+
+.item .img-content .viewPr{
+	font-size: 16px;
+	color: #ffffff;
+	border: none;
+	padding: 9px;
+	border-radius: 12px;
+	background-color: rgb(0, 0, 0);
 	width: 100%;
 	margin-top: 15px;
 }
