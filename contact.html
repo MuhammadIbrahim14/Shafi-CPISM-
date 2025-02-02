@@ -16,7 +16,7 @@
 
       <!-- Navbar Start  -->
 	<header class="header">
-		<div class="container">
+		<div class="nav-container">
 			<div class="row v-center">
 				<div class="header-item item-left">
 					<div class="logo">
@@ -193,26 +193,31 @@
                 </ul>
             </div>
             <div class="form-wrap">
-                <form action="#" method="POST">
+                <form action="#" method="POST" id="Contact-Form">
                     <h2 class="form-title">Send us a message</h2>
                     <div class="form-fields">
                         <div class="form-group">
-                            <input type="text" class="fname" placeholder="First Name">
+                            <input id="fName" type="text" class="fname" placeholder="First Name" name="fName">
+						<p class="error-message" id="firstnameError"></p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="lname" placeholder="Last Name">
+                            <input id="lName" type="text" class="lname" placeholder="Last Name" name="lName">
+						<p class="error-message" id="lastnameError"></p>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="email" placeholder="Mail">
+                            <input id="email" type="email" class="email" placeholder="Mail" name="email">
+						<p class="error-message" id="emailError"></p>
                         </div>
                         <div class="form-group">
-                            <input type="number" class="phone" placeholder="Phone">
+                            <input id="phone" type="number" class="phone" placeholder="Phone" name="phone">
+						<p class="error-message" id="phoneError"></p>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="" placeholder="Write your message"></textarea>
+                            <textarea id="message" name="message" id="" placeholder="Write your message"></textarea>
+						<p class="error-message" id="messageError"></p>
                         </div>
                     </div>
-                    <input type="submit" value="Send Message" class="submit-button">
+                    <input type="submit" value="SendMessage" class="submit-button">
                 </form>
             </div>
         </div>
